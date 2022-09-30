@@ -16,11 +16,8 @@ Post.init(
       type: DataTypes.STRING,
       allowNull:false 
     },
-    file_name: {
+    content: {
       type: DataTypes.STRING,
-
-      defaultValue: '../public/posts/',
-
       allowNull: false
     },
     user_id: {
