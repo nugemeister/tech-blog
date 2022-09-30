@@ -1,0 +1,35 @@
+[
+    {
+      "id": 1,
+      "comment_content": "Totally agree with this post!",
+      "user_id": 1,
+      "post_id": 1
+    },
+    {
+      "id": 2,
+      "comment_content": "This is a lovely blog post, I wish I wrote it!",
+      "user_id": 2,
+      "post_id": 1
+    },
+    {
+      "id": 3,
+      "comment_content": "This post is offensive, please remove it immediately!",
+      "user_id": 3,
+      "post_id": 2
+    },
+    {
+      "id": 4,
+      "comment_content": "What does this mean?",
+      "user_id": 2,
+      "post_id": 2
+    },
+    {
+      "id": 5,
+      "comment_content": "Are you ok?",
+      "user_id": 4,
+      "post_id": 3
+
+    }
+    
+  ]
+  
