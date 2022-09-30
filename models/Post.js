@@ -11,7 +11,7 @@ Post.init(
       autoIncrement: true,
       primaryKey: true,
     },
-    // points to cloudinary image URL (remove this boilderplate??)
+    // double-check for old code here!
     title: {
       type: DataTypes.STRING,
       allowNull:false 
