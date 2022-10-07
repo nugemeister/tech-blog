@@ -63,23 +63,15 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 <br></br>
 
 ## Usage
-1. Enter the command `node server.js` to initialize the application.
+1. Enter the command `node server.js` to initialize the application locally, or visit the deployed webpage at [PLACEHOLDER].
 2. Begin running the routes in Insomnia (or a similar tool) to interface with the database.
 
 <br></br>
-
-## Tests
-We suggest you run tests for API routes in Insomnia Core or another similar tool.
 
 <br></br>
 ## Video Demo
 > The following videos show the web application's appearance and functionality:
 
-https://user-images.githubusercontent.com/105621758/192189646-99cde980-a841-4194-9a13-eb839e8beffd.mp4
-
-https://user-images.githubusercontent.com/105621758/192189684-6a9a33f8-77be-4bf0-9172-673f9c15182b.mp4
-
-https://user-images.githubusercontent.com/105621758/192189799-2a6687d7-22d8-48eb-9a01-031748a5c64a.mp4
 
 ---
 
