@@ -1,46 +1,12 @@
-<!-- Imported Cloudinary Widget -->
+{{!-- gallery view --}}
   <div class = "m-auto p-6 flex justify-center">
-  <button id="upload_widget" class="cloudinary-button">Upload files</button>
-
-  <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>  
+  <button id="create_post" class="post-button">Create Post</button>
 
   <script type="text/javascript"> 
 
-  var myWidget = cloudinary.createUploadWidget({
-    cloudName: 'dwiso1uky', 
-    uploadPreset: 'asdfkjhasdf',
-    sources: [
-          "local",
-          "camera"
-      ],
-      googleApiKey: "<image_search_google_api_key>",
-      showAdvancedOptions: true,
-      cropping: true,
-      multiple: false,
-      defaultSource: "local",
-      styles: {
-          palette: {
-              window: "#FFFFFF",
-              windowBorder: "#90A0B3",
-              tabIcon: "#0078FF",
-              menuIcons: "#5A616A",
-              textDark: "#000000",
-              textLight: "#FFFFFF",
-              link: "#0078FF",
-              action: "#FF620C",
-              inactiveTabIcon: "#0E2F5A",
-              error: "#F44235",
-              inProgress: "#0078FF",
-              complete: "#20B832",
-              sourceBg: "#E4EBF1"
-          },
-          fonts: {
-              default: {
-                  active: true
-              }
-          }
-      }
-  }, async (error, result) => { 
+{{!-- create post route --}}
+
+ async (error, result) => { 
       if (!error && result && result.event === "success") { 
         console.log('Done! Here is the image info: ', result.info); 
       const newImage = { 
@@ -56,13 +22,13 @@
        if (response.ok) {
         document.location.replace('/gallery');
       } else {
-        alert('Failed to make new post.');
+        alert('Failed to create new post.');
       }
       }
     }
-  )
+  
 
-  document.getElementById("upload_widget").addEventListener("click", function(){
+  document.getElementById("create_post").addEventListener("click", function(){
       myWidget.open();
     }, false);
 
@@ -81,7 +47,7 @@
        <div class = "bg-white flex flex-col justify-center text-center border-solid rounded p-5 hover:bg-indigo-100">
           {{!-- Wrap in <a></a> tag, link to post --}}
           
-          <img src="{{post}}" alt="{{post.title}}" class="object-contain max-h-80">
+          <img src="{{post.title}}" alt="{{post.content}}" class="object-contain max-h-80">
           <a href="/post/{{post.id}}" class="btn border-solid border-2 border-white rounded p-1 text-sm bg-blue-600 text-white">View Post</a>
           {{!-- TODO: Add a Delete 'X' icon to thumbnails when mouse hovered, deletes a post after alerting the user if they want to proceed --}}
       <button onclick="deletePostHandler({{post.id}})"type="delete" id="post-delete" data-postclass="delete-button" class="border-solid border-2 border-white rounded p-1 text-sm bg-red-600 text-white">Delete</button>
