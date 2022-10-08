@@ -68,7 +68,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
 
          console.log(post)
  
-         res.render("post-render", { 
+         res.render("post", { 
            post,
            logged_in: req.session.logged_in });
        } else {
